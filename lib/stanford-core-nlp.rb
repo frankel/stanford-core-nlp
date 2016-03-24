@@ -1,4 +1,4 @@
-require 'stanford-core-nlp/config'
+require "#{File.dirname(__FILE__)}/stanford-core-nlp/config.rb"
 
 module StanfordCoreNLP
 
@@ -53,7 +53,7 @@ module StanfordCoreNLP
   # Stanford Core NLP bindings  #
   # ########################### #
 
-  require 'stanford-core-nlp/bridge'
+  require "#{File.dirname(__FILE__)}/stanford-core-nlp/bridge.rb"
   extend StanfordCoreNLP::Bridge
 
   class << self
