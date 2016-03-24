@@ -6,7 +6,7 @@ require 'pry'
 StanfordCoreNLP.jar_path = '/Users/frankel/Downloads/stanford/'
 StanfordCoreNLP.model_files = {}
 StanfordCoreNLP.default_jars = [
-  'joda-time-2.6.jar',
+  'joda-time.jar',
   'xom.jar',
   'stanford-corenlp-3.6.0.jar',
   'stanford-corenlp-3.6.0-models.jar',
@@ -41,6 +41,7 @@ text.get(:sentences).each do |sentence|
     puts token.get(:named_entity_tag).to_s
     # Coreference
     puts token.get(:coref_cluster_id).to_s
+    puts '================'
     # Also of interest: coref, coref_chain,
     # coref_cluster, coref_dest, coref_graph.
   end
