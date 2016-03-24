@@ -176,6 +176,8 @@ module StanfordCoreNLP
     # nlp.time.Options.<init>(Options.java:88)
     properties['sutime.binders'] = '0'
 
+    properties['ner.useSUTime'] = '0'
+
     # Manually include SUTime models.
     if annotators.include?(:ner)
       properties['sutime.rules'] =
